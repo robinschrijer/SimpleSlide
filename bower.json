@@ -1,0 +1,22 @@
+{
+  "name": "simpleslide",
+  "description": "The first try of a simple application for managing and presenting productslides",
+  "main": "app.js",
+  "authors": [
+    "robin schrijer"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "knockout": "^3.4.0"
+  }
+}

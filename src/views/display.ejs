@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        /*custom styles*/
+        
+        #sliderWrapper {
+            height: 100%;
+            widht: 100%;
+        }
+        
+        .slider ul li {
+            height: 100%;
+            widht: 100%;
+        }
+    </style>
+    <link href="/lib/unslider/dist/css/unslider.css" rel="stylesheet" />
+    <link href="/lib/unslider/dist/css/unslider-dots.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="sliderWrapper">
+        <div class="slider">
+            <ul>
+                <%slides.forEach(function(slide){%>
+                    <li class="slidecontent">
+                        <div>
+                            <%-slide.content %>
+                        </div>
+                    </li>
+                    <% }); %>
+            </ul>
+        </div>
+    </div>
+
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/lib/unslider/dist/js/unslider-min.js"></script>
+    <script>
+        jQuery(document).ready(function ($) {
+            $('.slider').unslider({
+                autoplay: true,
+                delay: 7500,
+                speed: 2000,
+                nav: false,
+                arrows: false,
+                infinite: true
+
+            });
+        });
+    </script>
+</body>
+
+</html>

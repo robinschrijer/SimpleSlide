@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include /partials/head %>
+</head>
+
+<body>
+    <div class="" id="wrap">
+        <div id="loginModal" class="modal show" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">                        
+                        <img alt="SimpleSlide" src="/images/SimpleSlide.png" class="img-responsive" style="width:2em;">
+                        <h1 class="text-center">SimpleSlide login</h1>
+                    </div>
+                    <div class="modal-body">
+                        <div>
+                            <%if(message){%>
+                                <div class="alert alert-<%=message.messageType%>">
+                                    <%-message.text%>
+                                </div>
+                                <%}%>
+                        </div>
+                        <form class="form col-md-12 center-block" method="post" action="/">
+                            <div class="form-group">
+                                <input type="text" class="form-control input-lg" name="username" id="username" placeholder="Gebruikersnaam">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control input-lg" name="password" id="password" placeholder="Wachtwoord">
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-primary btn-lg btn-block" type="submit">Inloggen</button>
+                            </div>
+                        </form>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="col-md-12">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="push"></div>
+    <footer id="footer">
+        <% include /partials/footer %>
+    </footer>
+    <% include /partials/bottomscript %>
+</body>
+
+</html>
